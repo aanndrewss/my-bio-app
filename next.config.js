@@ -2,6 +2,9 @@
 const nextConfig = {
 	experimental: {
 		appDir: true
+	},
+	env: {
+		APP_API_URL: process.env.APP_API_URL
 	}
 }
 

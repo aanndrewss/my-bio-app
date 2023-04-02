@@ -7,6 +7,6 @@ export const metadata: Metadata = {
 	description: 'The best developer you can hire!'
 }
 
-export default function Home() {
+export default async function Home() {
 	return <HomePage />
 }
