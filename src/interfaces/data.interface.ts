@@ -1,5 +1,5 @@
-import { ILinks } from './links.interface'
+import { ISocials } from './socials.interface'
 
 export interface IData {
-	links: ILinks[]
+	socials: ISocials[]
 }
