@@ -49,7 +49,9 @@ const Hero: FC = () => {
 					<ul className={styles.techList}>
 						{tech.map((t: ISocials) => (
 							<li className={styles.techItem} key={t.id}>
-								<t.Icon />
+								<a href={t.link} rel={'noreferrer'} target={'_blank'}>
+									<t.Icon />
+								</a>
 							</li>
 						))}
 					</ul>
