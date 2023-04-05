@@ -4,15 +4,24 @@
 		@apply flex flex-col;
 		.info {
 			@apply mb-32 flex h-[250px] flex-row gap-32;
-		}
-		.socialsList {
-			@apply mb-16 flex flex-row gap-6;
-			.socialsItem {
-				@apply cursor-pointer text-3xl transition-all duration-300 hover:text-secondary;
+			.desc {
+				@apply flex flex-col gap-4;
+				.subtitle {
+					@apply mb-2;
+				}
+				.paragraph {
+					@apply mb-2;
+				}
 			}
-		}
-		.avatar {
-			@apply rounded-full;
+			.socialsList {
+				@apply mb-16 flex flex-row gap-6;
+				.socialsItem {
+					@apply cursor-pointer text-3xl transition-all duration-300 hover:text-secondary;
+				}
+			}
+			.avatar {
+				@apply rounded-full;
+			}
 		}
 		.techStack {
 			@apply flex flex-row items-center justify-start gap-20;

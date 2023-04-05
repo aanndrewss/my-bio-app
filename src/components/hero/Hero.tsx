@@ -1,6 +1,10 @@
+'use client'
+
+import { motion } from 'framer-motion'
 import Image from 'next/image'
 import { FC } from 'react'
 
+import { slideIn } from '../../utils/motion/motion.js'
 import { Htag, Paragraph } from '../ui'
 
 import styles from './Hero.module.scss'
@@ -9,17 +13,21 @@ import { ISocials } from '@/interfaces/socials.interface'
 
 const Hero: FC = () => {
 	return (
-		<div className={styles.wrapper}>
+		<section className={styles.wrapper}>
 			<div className={styles.content}>
 				<div className={styles.info}>
-					<div className='flex flex-col'>
-						<Htag tag='h1' className='mb-4'>
-							Andrey Shihalev
-						</Htag>
-						<Htag tag='h3' className='mb-6'>
+					<motion.div
+						viewport={{ once: true }}
+						initial='hidden'
+						whileInView='show'
+						variants={slideIn('left', 'spring', 0.3, 0.75)}
+						className={styles.desc}
+					>
+						<Htag tag='h1'>Andrey Shihalev</Htag>
+						<Htag tag='h3' className={styles.subtitle}>
 							Front-End React Developer.
 						</Htag>
-						<Paragraph className='text-left mb-6'>
+						<Paragraph className={styles.paragraph}>
 							Freelancer and student. I am developing user interfaces. Based in
 							Kazan, Russia. 📍
 						</Paragraph>
@@ -32,7 +40,7 @@ const Hero: FC = () => {
 								</li>
 							))}
 						</ul>
-					</div>
+					</motion.div>
 					<Image
 						className={styles.avatar}
 						src='/images/avatar.jpg'
@@ -42,7 +50,13 @@ const Hero: FC = () => {
 						height={250}
 					/>
 				</div>
-				<div className={styles.techStack}>
+				<motion.div
+					viewport={{ once: true }}
+					initial='hidden'
+					whileInView='show'
+					variants={slideIn('up', 'spring', 0.3, 0.75)}
+					className={styles.techStack}
+				>
 					<Htag tag='h4'>
 						Tech stack <span className='ml-4'>|</span>
 					</Htag>
@@ -55,9 +69,9 @@ const Hero: FC = () => {
 							</li>
 						))}
 					</ul>
-				</div>
+				</motion.div>
 			</div>
-		</div>
+		</section>
 	)
 }
 
