@@ -10,6 +10,7 @@ import { Htag, Paragraph } from '../ui'
 import styles from './Hero.module.scss'
 import { socials, tech } from './data'
 import { ISocials } from '@/interfaces/socials.interface'
+import { ITech } from '@/interfaces/tech.interface.js'
 
 const Hero: FC = () => {
 	return (
@@ -61,8 +62,12 @@ const Hero: FC = () => {
 						Tech stack <span className='ml-4'>|</span>
 					</Htag>
 					<ul className={styles.techList}>
-						{tech.map((t: ISocials) => (
-							<li className={styles.techItem} key={t.id}>
+						{tech.map((t: ITech) => (
+							<li
+								className={styles.techItem}
+								style={{ color: `${t.color}` }}
+								key={t.id}
+							>
 								<a href={t.link} rel={'noreferrer'} target={'_blank'}>
 									<t.Icon />
 								</a>
