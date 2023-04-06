@@ -1,6 +1,15 @@
 .wrapper {
 	@apply flex h-screen items-center justify-center;
 	.content {
-		@apply flex;
+		@apply flex w-full flex-col;
+		.subtitle {
+			@apply mb-4 text-secondary;
+		}
+		.title {
+			@apply mb-6;
+		}
+		.cardList {
+			@apply mt-20 grid grid-cols-3 gap-10;
+		}
 	}
 }

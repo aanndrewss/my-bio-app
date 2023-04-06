@@ -1,7 +1,7 @@
 .wrapper {
 	@apply fixed z-10 w-full bg-white shadow-lg;
 	.content {
-		@apply flex flex-row items-center justify-between px-24 py-5;
+		@apply flex flex-row items-center justify-between px-10 py-5;
 		.navList {
 			@apply flex flex-row gap-4 text-lg font-medium;
 			.navItem {

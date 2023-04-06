@@ -1,0 +1,9 @@
+.cardTilt {
+	@apply w-full;
+	.card {
+		@apply flex min-h-[250px] flex-col items-center justify-evenly rounded-[20px] px-12 py-5 shadow-lg shadow-slate-300 ring-1 ring-slate-200;
+		.title {
+			@apply text-center;
+		}
+	}
+}
