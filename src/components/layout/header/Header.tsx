@@ -1,5 +1,6 @@
 import { Pacifico } from '@next/font/google'
 import { FC } from 'react'
+import { FiMenu } from 'react-icons/fi'
 
 import { Htag } from '@/components/ui'
 
@@ -27,6 +28,7 @@ const Header: FC<HeaderProps> = ({ links }) => {
 							</li>
 						))}
 					</ul>
+					<FiMenu className={styles.menu} />
 				</nav>
 			</div>
 		</header>

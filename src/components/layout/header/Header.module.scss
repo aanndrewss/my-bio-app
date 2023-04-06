@@ -1,11 +1,21 @@
+@import '../../../styles/media';
 .wrapper {
 	@apply fixed z-10 w-full bg-white shadow-lg;
 	.content {
 		@apply flex flex-row items-center justify-between px-10 py-5;
 		.navList {
 			@apply flex flex-row gap-4 text-lg font-medium;
+			@include media(tablet) {
+				@apply hidden;
+			}
 			.navItem {
 				@apply cursor-pointer;
+			}
+		}
+		.menu {
+			@apply hidden;
+			@include media(tablet) {
+				@apply block cursor-pointer text-3xl;
 			}
 		}
 	}
