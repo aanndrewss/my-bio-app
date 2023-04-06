@@ -1,5 +1,4 @@
 import { Pacifico } from '@next/font/google'
-import Link from 'next/link'
 import { FC } from 'react'
 
 import { Htag } from '@/components/ui'
@@ -24,7 +23,7 @@ const Header: FC<HeaderProps> = ({ links }) => {
 					<ul className={styles.navList}>
 						{links.map((l: ILinks) => (
 							<li className={styles.navItem} key={l.id}>
-								<Link href='#'>{l.title}</Link>
+								<a href={`#${l.slug}`}>{l.title}</a>
 							</li>
 						))}
 					</ul>

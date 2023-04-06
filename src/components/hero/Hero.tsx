@@ -14,7 +14,7 @@ import { ITech } from '@/interfaces/tech.interface.js'
 
 const Hero: FC = () => {
 	return (
-		<section className={styles.wrapper}>
+		<section id='home' className={styles.wrapper}>
 			<div className={styles.content}>
 				<div className={styles.info}>
 					<motion.div

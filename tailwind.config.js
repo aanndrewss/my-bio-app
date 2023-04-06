@@ -21,6 +21,16 @@ module.exports = {
 				...colors,
 				primary: '#1d1d1d',
 				secondary: '#475569'
+			},
+			keyframes: {
+				levitate: {
+					to: {
+						transform: 'translateY(10px)'
+					}
+				}
+			},
+			animation: {
+				levitate: 'levitate 1.5s infinite ease alternate'
 			}
 		}
 	},

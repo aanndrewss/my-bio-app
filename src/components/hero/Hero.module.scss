@@ -3,7 +3,7 @@
 	.content {
 		@apply flex flex-col;
 		.info {
-			@apply mb-32 flex h-[250px] flex-row gap-32;
+			@apply mb-32 flex h-full flex-row gap-32;
 			.desc {
 				@apply flex flex-col gap-4;
 				.subtitle {
@@ -20,7 +20,7 @@
 				}
 			}
 			.avatar {
-				@apply rounded-full;
+				@apply relative mt-[-10px] h-[250px] w-[250px] animate-levitate rounded-full object-contain;
 			}
 		}
 		.techStack {
