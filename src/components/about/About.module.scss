@@ -1,11 +1,11 @@
 @import '../../styles/media';
 .wrapper {
-	@apply flex h-screen items-center justify-center py-24;
+	@apply flex h-screen justify-center pt-24;
 	@include media(tablet) {
 		@apply h-auto;
 	}
 	.content {
-		@apply flex w-full flex-col;
+		@apply flex w-full flex-col justify-center;
 		@include media(tablet) {
 			@apply items-center;
 		}
@@ -24,7 +24,7 @@
 			}
 		}
 		.cardList {
-			@apply mt-20 grid grid-cols-3  gap-10;
+			@apply mt-16 grid grid-cols-3  gap-10;
 			@include media(tablet) {
 				@apply mt-10 grid-cols-2 gap-6;
 			}

@@ -1,6 +1,6 @@
 @import '../../styles/media';
 .wrapper {
-	@apply flex h-screen justify-center py-24;
+	@apply flex h-screen justify-center py-28;
 	@include media(tablet) {
 		@apply h-auto;
 	}
@@ -50,15 +50,18 @@
 				@apply flex-col gap-8;
 			}
 			.techTitle {
-				@apply border-r-2 border-solid border-secondary px-2;
+				@apply border-r-2 border-solid border-secondary pr-2;
 				@include media(tablet) {
-					@apply border-b-2 border-r-0;
+					@apply border-b-2 border-r-0 pr-0;
 				}
 			}
 			.techList {
 				@apply flex flex-row flex-wrap justify-center gap-10;
+				@include media(mobile) {
+					@apply gap-6;
+				}
 				.techItem {
-					@apply cursor-pointer text-3xl;
+					@apply cursor-pointer text-4xl;
 				}
 			}
 		}
