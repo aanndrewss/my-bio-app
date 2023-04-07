@@ -58,8 +58,8 @@ const Hero: FC = () => {
 					variants={slideIn('up', 'spring', 0.3, 0.75)}
 					className={styles.techStack}
 				>
-					<Htag tag='h4'>
-						Tech stack <span className='ml-4'>|</span>
+					<Htag tag='h4' className={styles.techTitle}>
+						Tech stack
 					</Htag>
 					<ul className={styles.techList}>
 						{tech.map((t: ITech) => (

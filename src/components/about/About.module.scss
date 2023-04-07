@@ -1,15 +1,36 @@
+@import '../../styles/media';
 .wrapper {
-	@apply flex h-screen items-center justify-center;
+	@apply flex h-screen items-center justify-center py-24;
+	@include media(tablet) {
+		@apply h-auto;
+	}
 	.content {
 		@apply flex w-full flex-col;
+		@include media(tablet) {
+			@apply items-center;
+		}
 		.subtitle {
 			@apply mb-4 text-secondary;
+			@include media(tablet) {
+				@apply text-center;
+			}
 		}
 		.title {
 			@apply mb-6;
 		}
+		.p {
+			@include media(tablet) {
+				@apply text-center;
+			}
+		}
 		.cardList {
-			@apply mt-20 grid grid-cols-3 gap-10;
+			@apply mt-20 grid grid-cols-3  gap-10;
+			@include media(tablet) {
+				@apply mt-10 grid-cols-2 gap-6;
+			}
+			@include media(mobile) {
+				@apply mt-8 grid-cols-1 gap-4;
+			}
 		}
 	}
 }

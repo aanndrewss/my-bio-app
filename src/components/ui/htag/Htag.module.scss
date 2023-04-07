@@ -1,19 +1,42 @@
+@import '../../../styles/media';
 .h {
 	@apply m-0;
 }
 
 .h1 {
 	@apply text-5xl font-bold;
+	@include media(tablet) {
+		@apply text-4xl;
+	}
+	@include media(mobile) {
+		@apply text-3xl;
+	}
 }
 
 .h2 {
 	@apply text-3xl font-bold;
+	@include media(tablet) {
+		@apply text-2xl;
+	}
+	@include media(mobile) {
+		@apply text-xl;
+	}
 }
 
 .h3 {
 	@apply text-2xl font-semibold;
+	@include media(tablet) {
+		@apply text-xl;
+	}
+	@include media(mobile) {
+		@apply text-lg;
+	}
 }
 
 .h4 {
 	@apply text-xl font-semibold;
+
+	@include media(mobile) {
+		@apply text-base;
+	}
 }

@@ -35,7 +35,7 @@ const About: FC = () => {
 					whileInView='show'
 					variants={fadeIn('', '', 0.1, 1)}
 				>
-					<Paragraph>
+					<Paragraph className={styles.p}>
 						I'm a skilled software developer with experience in TypeScript and
 						JavaScript, and expertise in frameworks like React and Next.js I
 						also have a little experience in frameworks such as Nest.js. I'm a
