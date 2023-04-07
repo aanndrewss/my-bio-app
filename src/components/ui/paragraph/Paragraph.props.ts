@@ -1,10 +1,7 @@
-import { DetailedHTMLProps, HTMLAttributes, ReactNode } from 'react'
+import { VariantProps } from 'class-variance-authority'
+
+import { paragraphVariants } from './Paragraph'
 
 export interface ParagraphProps
-	extends DetailedHTMLProps<
-		HTMLAttributes<HTMLParagraphElement>,
-		HTMLParagraphElement
-	> {
-	children: ReactNode
-	size?: 's' | 'm'
-}
+	extends React.HTMLAttributes<HTMLParagraphElement>,
+		VariantProps<typeof paragraphVariants> {}

@@ -5,36 +5,40 @@ import Image from 'next/image'
 import { FC } from 'react'
 
 import { slideIn } from '../../utils/motion/motion.js'
-import { Htag, Paragraph } from '../ui'
+import Paragraph from '../ui/paragraph/Paragraph'
 
-import styles from './Hero.module.scss'
 import { socials, tech } from './data'
 import { ISocials } from '@/interfaces/socials.interface'
 import { ITech } from '@/interfaces/tech.interface.js'
 
 const Hero: FC = () => {
 	return (
-		<section id='home' className={styles.wrapper}>
-			<div className={styles.content}>
-				<div className={styles.info}>
+		<section id='home' className='flex h-screen justify-center py-28 md:h-auto'>
+			<div className='flex flex-col justify-center'>
+				<div className='relative mb-32 flex flex-row gap-32 md:mb-10 md:flex-col-reverse md:justify-center md:items-center md:gap-4'>
 					<motion.div
 						viewport={{ once: true }}
 						initial='hidden'
 						whileInView='show'
 						variants={slideIn('left', 'spring', 0.3, 0.75)}
-						className={styles.desc}
+						className='flex flex-col gap-4 md:items-center'
 					>
-						<Htag tag='h1'>Andrey Shihalev</Htag>
-						<Htag tag='h3' className={styles.subtitle}>
+						<h1 className='text-6xl font-bold mb-4 md:text-center'>
+							Andrey Shihalev
+						</h1>
+						<h3 className='text-4xl font-semibold mb-2 md:text-center'>
 							Front-End React Developer.
-						</Htag>
-						<Paragraph className={styles.paragraph}>
+						</h3>
+						<Paragraph className='mb-2 md:text-center'>
 							Freelancer and student. I am developing user interfaces. Based in
 							Kazan, Russia. 📍
 						</Paragraph>
-						<ul className={styles.socialsList}>
+						<ul className='flex flex-row gap-6'>
 							{socials.map((s: ISocials) => (
-								<li className={styles.socialsItem} key={s.id}>
+								<li
+									className='cursor-pointer text-3xl transition-all duration-300 hover:text-secondary'
+									key={s.id}
+								>
 									<a href={s.link} rel={'noreferrer'} target={'_blank'}>
 										<s.Icon />
 									</a>
@@ -43,7 +47,7 @@ const Hero: FC = () => {
 						</ul>
 					</motion.div>
 					<Image
-						className={styles.avatar}
+						className='relative mt-[-10px] h-[250px] w-[250px] animate-levitate rounded-full object-contain md:h-[230px] md:w-[230px] sm:w-[200px] sm:h-[200px]'
 						src='/images/avatar.jpg'
 						alt='Avatar'
 						quality={100}
@@ -56,15 +60,15 @@ const Hero: FC = () => {
 					initial='hidden'
 					whileInView='show'
 					variants={slideIn('up', 'spring', 0.3, 0.75)}
-					className={styles.techStack}
+					className='flex flex-row items-center justify-start gap-20 md:flex-col md:gap-8'
 				>
-					<Htag tag='h4' className={styles.techTitle}>
+					<h4 className='text-xl font-semibold md:border-b-2 md:border-r-0 md:pr-0 border-r-2 border-solid border-secondary dark:border-textWhite pr-2'>
 						Tech stack
-					</Htag>
-					<ul className={styles.techList}>
+					</h4>
+					<ul className='flex flex-row flex-wrap justify-center gap-10 md:gap-6'>
 						{tech.map((t: ITech) => (
 							<li
-								className={styles.techItem}
+								className='cursor-pointer text-4xl'
 								style={{ color: `${t.color}` }}
 								key={t.id}
 							>

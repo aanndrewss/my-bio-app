@@ -1,9 +1,7 @@
-import { ButtonHTMLAttributes, DetailedHTMLProps, ReactNode } from 'react'
+import { VariantProps } from 'class-variance-authority'
+
+import { buttonVariants } from './Button'
 
 export interface ButtonProps
-	extends DetailedHTMLProps<
-		ButtonHTMLAttributes<HTMLButtonElement>,
-		HTMLButtonElement
-	> {
-	children: ReactNode
-}
+	extends React.ButtonHTMLAttributes<HTMLButtonElement>,
+		VariantProps<typeof buttonVariants> {}

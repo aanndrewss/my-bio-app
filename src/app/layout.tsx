@@ -2,6 +2,7 @@ import { Urbanist } from '@next/font/google'
 import axios, { AxiosResponse } from 'axios'
 
 import Header from '@/components/layout/header/Header'
+import Providers from '@/components/providers/Providers'
 
 import { ILinks } from '@/interfaces/links.interface'
 import '@/styles/globals.scss'
@@ -32,9 +33,11 @@ export default async function RootLayout({
 	}
 	return (
 		<html lang='en' className={urbanist.className}>
-			<body>
-				<Header links={links} />
-				<main>{children}</main>
+			<body className='m-0 min-h-screen overflow-x-hidden scroll-smooth bg-white p-0 text-primary antialiased dark:bg-[#0f0f0f] dark:text-white'>
+				<Providers>
+					<Header links={links} />
+					<main>{children}</main>
+				</Providers>
 			</body>
 		</html>
 	)

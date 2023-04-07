@@ -3,11 +3,9 @@ import { FC } from 'react'
 import About from '@/components/about/About'
 import Hero from '@/components/hero/Hero'
 
-import styles from './Home.module.scss'
-
 const HomePage: FC = () => {
 	return (
-		<div className={styles.wrapper}>
+		<div className='m-auto h-screen w-full min-w-[320px] max-w-[900px] px-10 md:max-w-[480px]'>
 			<Hero />
 			<About />
 		</div>

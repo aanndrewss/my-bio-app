@@ -2,11 +2,11 @@ import { Pacifico } from '@next/font/google'
 import { FC } from 'react'
 import { FiMenu } from 'react-icons/fi'
 
-import { Htag } from '@/components/ui'
+import ThemeToggle from '@/components/theme-toggle/ThemeToggle'
 
-import styles from './Header.module.scss'
 import { HeaderProps } from './Header.props'
 import { ILinks } from '@/interfaces/links.interface'
+import { cn } from '@/lib/utils/tw-merge'
 
 const pacifico = Pacifico({
 	weight: '400',
@@ -15,20 +15,21 @@ const pacifico = Pacifico({
 
 const Header: FC<HeaderProps> = ({ links }) => {
 	return (
-		<header className={styles.wrapper}>
-			<div className={styles.content}>
-				<Htag tag='h2' className={pacifico.className}>
+		<header className='fixed z-10 w-full bg-white shadow-lg dark:bg-bgBlack'>
+			<div className=' flex flex-row items-center justify-between px-10 py-5'>
+				<span className={cn(pacifico.className, 'text-4xl font-bold')}>
 					andrews
-				</Htag>
-				<nav>
-					<ul className={styles.navList}>
+				</span>
+				<nav className='flex flex-row items-center gap-10'>
+					<ThemeToggle />
+					<ul className='flex flex-row gap-4 text-lg font-medium md:hidden'>
 						{links.map((l: ILinks) => (
-							<li className={styles.navItem} key={l.id}>
+							<li className='cursor-pointer text-xl font-semibold' key={l.id}>
 								<a href={`#${l.slug}`}>{l.title}</a>
 							</li>
 						))}
 					</ul>
-					<FiMenu className={styles.menu} />
+					<FiMenu className='hidden cursor-pointer text-3xl md:block' />
 				</nav>
 			</div>
 		</header>
