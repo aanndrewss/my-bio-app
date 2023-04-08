@@ -14,7 +14,7 @@ const Card: FC<CardProps> = ({ title, index, image }) => {
 				initial='hidden'
 				whileInView='show'
 				variants={fadeIn('right', 'spring', index * 0.5, 0.75)}
-				className='flex min-h-[250px] max-w-[250px] flex-col items-center justify-evenly rounded-[20px] px-12 py-5 shadow-lg shadow-slate-300 ring-1 ring-slate-200 dark:shadow-slate-800 dark:ring-black md:min-h-[230px] md:px-10 md:py-4 sm:min-h-[200px] sm:px-8 sm:py-3'
+				className='flex min-h-[250px] max-w-[250px] flex-col items-center justify-evenly rounded-[20px] px-12 py-5 shadow-cardWhite ring-1 ring-slate-200 dark:shadow-cardDark dark:ring-0 md:min-h-[230px] md:px-10 md:py-4 sm:min-h-[200px] sm:px-8 sm:py-3'
 			>
 				<img src={image.url} alt={image.alt} width={55} height={55} />
 				<h4 className='text-xl font-semibold text-center'>{title}</h4>

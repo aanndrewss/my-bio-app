@@ -4,6 +4,7 @@
 	"tawWidth": 2,
 	"useTabs": true,
 	"semi": false,
+	"printWidth": 100,
 	"jsxSingleQuote": true,
 	"arrowParens": "avoid",
 	"importOrder": [
@@ -23,6 +24,8 @@
 		"^../(.*)",
 		"^./(.*)"
 	],
+	"tailwindConfig": "./tailwind.config.js",
 	"importOrderSeparation": true,
-	"importOrderSortSpecifiers": true
+	"importOrderSortSpecifiers": true,
+	"plugins": ["@trivago/prettier-plugin-sort-imports","prettier-plugin-tailwindcss"]
 }

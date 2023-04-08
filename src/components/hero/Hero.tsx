@@ -7,9 +7,9 @@ import { FC } from 'react'
 import { slideIn } from '../../utils/motion/motion.js'
 import Paragraph from '../ui/paragraph/Paragraph'
 
-import { socials, tech } from './data'
 import { ISocials } from '@/interfaces/socials.interface'
 import { ITech } from '@/interfaces/tech.interface.js'
+import { socials, tech } from './data'
 
 const Hero: FC = () => {
 	return (

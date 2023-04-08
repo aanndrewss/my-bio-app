@@ -7,9 +7,9 @@ import { fadeIn, textVariant } from '@/utils/motion/motion'
 
 import Paragraph from '../ui/paragraph/Paragraph'
 
+import { IServices } from '@/interfaces/services.interface'
 import Card from './card/Card'
 import { services } from './data/services.data'
-import { IServices } from '@/interfaces/services.interface'
 
 const About: FC = () => {
 	return (
@@ -43,7 +43,7 @@ const About: FC = () => {
 						projects and develop outstanding web applications.
 					</Paragraph>
 				</motion.div>
-				<div className='mt-16 grid grid-cols-3 gap-10 md:mt-10 md:grid-cols-2 md:gap-6 sm:mt-8 sm:grid-cols-1 sm:gap-4'>
+				<div className='mt-16 flex flex-wrap gap-10 justify-center'>
 					{services.map((s: IServices, index) => (
 						<Card key={s.title} {...s} index={index} />
 					))}

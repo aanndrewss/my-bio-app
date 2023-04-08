@@ -5,6 +5,7 @@ import Header from '@/components/layout/header/Header'
 import Providers from '@/components/providers/Providers'
 
 import { ILinks } from '@/interfaces/links.interface'
+import { cn } from '@/lib/utils/tw-merge'
 import '@/styles/globals.scss'
 
 const urbanist = Urbanist({
@@ -32,8 +33,8 @@ export default async function RootLayout({
 		return null
 	}
 	return (
-		<html lang='en' className={urbanist.className}>
-			<body className='m-0 min-h-screen overflow-x-hidden scroll-smooth bg-white p-0 text-primary antialiased dark:bg-[#0f0f0f] dark:text-white'>
+		<html lang='en' className={cn('scroll-smooth', urbanist.className)}>
+			<body className='m-0 overflow-x-hidden min-h-screen bg-white p-0 text-primary antialiased dark:bg-[#0f0f0f] dark:text-white'>
 				<Providers>
 					<Header links={links} />
 					<main>{children}</main>

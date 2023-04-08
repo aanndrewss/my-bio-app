@@ -19,6 +19,10 @@ module.exports = {
 				sm: { max: '480px' },
 				md: { max: '768px' }
 			},
+			boxShadow: {
+        cardDark: '0px 35px 120px -15px #211e35',
+				cardWhite: '0px 35px 120px -15px #d8d8d8'
+      },
 			fontFamily: {
 				sans: ['var(--urbanist)', ...fontFamily.sans]
 			},

@@ -4,9 +4,9 @@ import { FiMenu } from 'react-icons/fi'
 
 import ThemeToggle from '@/components/theme-toggle/ThemeToggle'
 
-import { HeaderProps } from './Header.props'
 import { ILinks } from '@/interfaces/links.interface'
 import { cn } from '@/lib/utils/tw-merge'
+import { HeaderProps } from './Header.props'
 
 const pacifico = Pacifico({
 	weight: '400',
