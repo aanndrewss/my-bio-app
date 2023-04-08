@@ -13,7 +13,7 @@ import { IServices } from '@/interfaces/services.interface'
 
 const About: FC = () => {
 	return (
-		<section id='about' className='flex h-screen justify-center pt-24 md:h-auto'>
+		<section id='about' className='flex h-screen justify-center py-24 md:h-auto'>
 			<div className='flex w-full flex-col justify-center md:items-center'>
 				<motion.div
 					viewport={{ once: true }}

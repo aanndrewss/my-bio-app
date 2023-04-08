@@ -1,6 +1,7 @@
 import { Urbanist } from '@next/font/google'
 import axios, { AxiosResponse } from 'axios'
 
+import Footer from '@/components/layout/footer/Footer'
 import Header from '@/components/layout/header/Header'
 import Providers from '@/components/providers/Providers'
 
@@ -32,6 +33,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
 				<Providers>
 					<Header links={links} />
 					<main>{children}</main>
+					<Footer />
 				</Providers>
 			</body>
 		</html>
