@@ -1,5 +1,6 @@
 import {
 	SiCss3,
+	SiDocker,
 	SiHtml5,
 	SiJavascript,
 	SiReact,
@@ -67,5 +68,12 @@ export const tech: ITech[] = [
 		link: 'https://tailwindcss.com/',
 		color: '#38B2AC',
 		Icon: SiTailwindcss
+	},
+	{
+		id: 9,
+		title: 'Docker',
+		link: 'https://www.docker.com/',
+		color: '#0db7ed',
+		Icon: SiDocker
 	}
 ]

@@ -20,9 +20,9 @@ module.exports = {
 				md: { max: '768px' }
 			},
 			boxShadow: {
-        cardDark: '0px 35px 120px -15px #211e35',
+				cardDark: '0px 35px 120px -15px #211e35',
 				cardWhite: '0px 35px 120px -15px #d8d8d8'
-      },
+			},
 			fontFamily: {
 				sans: ['var(--urbanist)', ...fontFamily.sans]
 			},
@@ -32,6 +32,9 @@ module.exports = {
 				secondary: '#475569',
 				textWhite: '#d8d8d8',
 				bgBlack: '#0f0f0f'
+			},
+			backgroundImage: {
+				avatar: "url('/images/avatar.jpg')"
 			},
 			keyframes: {
 				levitate: {

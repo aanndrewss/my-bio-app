@@ -14,20 +14,14 @@ const urbanist = Urbanist({
 
 const loadLinks = async () => {
 	try {
-		const res: AxiosResponse<ILinks[]> = await axios.get(
-			`${process.env.APP_API_URL}/links`
-		)
+		const res: AxiosResponse<ILinks[]> = await axios.get(`${process.env.APP_API_URL}/links`)
 		return res.data
 	} catch (e) {
 		console.error(e)
 	}
 }
 
-export default async function RootLayout({
-	children
-}: {
-	children: React.ReactNode
-}) {
+export default async function RootLayout({ children }: { children: React.ReactNode }) {
 	const links = await loadLinks()
 	if (!links) {
 		return null
