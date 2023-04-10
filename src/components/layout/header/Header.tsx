@@ -2,6 +2,7 @@ import { Pacifico } from '@next/font/google'
 import { FC } from 'react'
 import { FiMenu } from 'react-icons/fi'
 
+import SelectLang from '@/components/select-lang/SelectLang'
 import ThemeToggle from '@/components/theme-toggle/ThemeToggle'
 
 import { HeaderProps } from './Header.props'
@@ -19,6 +20,7 @@ const Header: FC<HeaderProps> = ({ links }) => {
 			<div className=' flex flex-row items-center justify-between px-10 py-5'>
 				<span className={cn(pacifico.className, 'text-4xl font-bold')}>andrews</span>
 				<nav className='flex flex-row items-center gap-10'>
+					<SelectLang />
 					<ThemeToggle />
 					<ul className='flex flex-row gap-4 text-lg font-medium md:hidden'>
 						{links.map((l: ILinks) => (

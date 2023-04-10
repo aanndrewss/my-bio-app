@@ -39,7 +39,7 @@ const About: FC = () => {
 						ideas to projects and develop outstanding web applications.
 					</Paragraph>
 				</motion.div>
-				<div className='mt-16 flex flex-wrap gap-10 justify-center'>
+				<div className='mt-16 grid grid-cols-3 gap-10 justify-center md:grid-cols-2 sm:flex sm:flex-col'>
 					{services.map((s: IServices, index) => (
 						<Card key={s.title} {...s} index={index} />
 					))}
