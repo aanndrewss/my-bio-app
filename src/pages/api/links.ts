@@ -25,9 +25,6 @@ const links = [
 	}
 ]
 
-export default function handler(
-	req: NextApiRequest,
-	res: NextApiResponse<ILinks[]>
-) {
+export default function handler(req: NextApiRequest, res: NextApiResponse<ILinks[]>) {
 	res.status(200).json(links)
 }

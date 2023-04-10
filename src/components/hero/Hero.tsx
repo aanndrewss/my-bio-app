@@ -9,10 +9,9 @@ import Paragraph from '../ui/paragraph/Paragraph'
 import { socials, tech } from './data'
 import { ISocials } from '@/interfaces/socials.interface'
 import { ITech } from '@/interfaces/tech.interface.js'
-import { useTranslate } from '@/lib/i18n'
 
 const Hero: FC = () => {
-	const translate = useTranslate()
+	// const translate = useTranslate()
 	return (
 		<section id='home' className='flex h-screen justify-center py-28 md:h-auto'>
 			<div className='flex flex-col justify-center'>
@@ -24,7 +23,7 @@ const Hero: FC = () => {
 						variants={slideIn('left', 'spring', 0.3, 0.75)}
 						className='flex flex-col gap-4 md:items-center'
 					>
-						<h1 className='text-6xl font-bold mb-4 md:text-center'>{translate('Hero.fullName')}</h1>
+						<h1 className='text-6xl font-bold mb-4 md:text-center'>Andrew Shihalev</h1>
 						<h3 className='text-4xl font-semibold mb-2 md:text-center'>
 							Front-End React Developer.
 						</h3>
