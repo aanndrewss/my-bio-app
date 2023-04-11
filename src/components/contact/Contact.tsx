@@ -11,7 +11,7 @@ import { IContact } from '@/interfaces/contact.interface'
 
 const Contact: FC = () => {
 	return (
-		<section id='contact' className='flex h-screen justify-center py-28 md:h-auto'>
+		<section id='contact' className='flex justify-center py-28'>
 			<div className='flex w-full flex-col justify-evenly md:items-center'>
 				<motion.div
 					viewport={{ once: true }}
